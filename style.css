@@ -22,16 +22,19 @@ body {
     border: 1px solid red;
 
     position: absolute;
-    top: var(--top_left_slotY);
+    top: calc(var(--top_left_slotY) - 0.5*var(--small_border_size));
     left: var(--top_left_slotX);
     
     display: grid;
-    
+    line-height: 0;
 }
 
 .item{
     width: var(--item_size);
     height: var(--item_size);
+
+    margin-top: calc(0.5*var(--small_border_size));
+    margin-bottom: calc(0.5*var(--small_border_size));
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -55,8 +58,6 @@ body {
 
 #inventar{
     width: 100dvw;
-    height: calc(56.25dvw - 1px);
+    height: calc(56.25dvw);
     background-image: url(inventory_empty.png),url(background_candidate1.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
 }
