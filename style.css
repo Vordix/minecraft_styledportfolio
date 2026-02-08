@@ -19,7 +19,7 @@ body {
     --1slot_down: calc(var(--item_size) + var(--small_border_size));
 }
 #inventar_armor{
-    border: 0px solid red;
+    border: 1px solid red;
 
     position: absolute;
     top: calc(var(--top_left_slotY) - 0.5*var(--small_border_size));
@@ -30,6 +30,16 @@ body {
 }
 #inventar_mainbody{
     border: 1px solid red;
+
+    position: absolute;
+    top: calc(var(--top_left_slotY) + 4*var(--1slot_down) + var(--big_border_size) - var(--small_border_size) - 0.2dvw);
+    left: var(--top_left_slotX);
+
+    line-height: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    height: calc(3*var(--1slot_down));
+    width: calc(9*var(--1slot_down));
 }
 
 .item{
@@ -48,8 +58,7 @@ body {
     width: var(--item_size);
     height: var(--item_size);
 
-    margin-top: calc(0.5*var(--small_border_size));
-    margin-bottom: calc(0.5*var(--small_border_size));
+    margin: calc(0.5*var(--small_border_size));
 
     border: 1px solid rgb(9, 255, 0);
 }
