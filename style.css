@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --item_size: 4.34dvw;
+    --small_border_size: 0.33dvw;
+    --big_border_size: 1.32dvw;
+    --top_left_slotY: 8.18dvw;
+    --top_left_slotX: 27.85dvw;
+    --1slot_down: calc(var(--item_size) + var(--small_border_size));
+}
+#inventar_table{
+    border: 1px solid red;
+
+    position: absolute;
+    top: var(--top_left_slotY);
+    left: var(--top_left_slotX);
+    
+    display: grid;
+    
+}
+
+.item{
+    width: var(--item_size);
+    height: var(--item_size);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid purple;
+
+    image-rendering: pixelated;
+}
+
+#iron_pickaxe{
+    background-image: url(iron_pickaxe.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: calc(var(--top_left_slotY) );
+    left: calc(var(--top_left_slotX));
+
+    width: var(--item_size);
+    height: var(--item_size);
+}
+
+#inventar{
+    width: 100dvw;
+    height: calc(56.25dvw - 1px);
+    background-image: url(inventory_empty.png),url(background_candidate1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
