@@ -46,13 +46,16 @@ body {
     width: var(--item_size);
     height: var(--item_size);
 
-    
+    cursor: grab;
+    position: relative;
 
     background-size: cover;
     background-repeat: no-repeat;
     border: 1px solid purple;
 
     image-rendering: pixelated;
+    user-select: none;
+    transition: opacity 0.0s;
 }
 .slot{
     width: var(--item_size);
